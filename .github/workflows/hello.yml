@@ -6,7 +6,7 @@ jobs:
     steps:
       - name: Hello world action steps
         id: greet
-        uses: savagame/greeting-action@v1.0.0
+        uses: savagame/greeting-action@v1.0.1
         with:
           who-to-greet: Samsam
       - name: Get the output time
