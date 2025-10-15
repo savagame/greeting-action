@@ -1,0 +1,16 @@
+name: Say Hello
+description: This is action to print Greeting and output current time
+
+inputs:
+  who-to-greet:
+    description: Who to greet
+    required: true
+    default: World
+
+outputs:
+  time:
+    description: The time we greeted you
+
+runs:
+  using: node20
+  main: dist/index.js
