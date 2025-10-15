@@ -5,6 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
+      - run: npm ci
       - name: Hello world action steps
         id: greet
         uses: ./
