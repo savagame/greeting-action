@@ -1,16 +1,1 @@
-import * as core from '@actions/core';
-import * as github from '@actions/github';
-
-try {
-  const nameToGreet = core.getInput("who-to-greet");
-  core.info(`Hello ${nameToGreet}`);
-
-  const time = new Date().toTimeString();
-  core.setOutput("time", time);
-
-  const payload = JSON.stringify(github.context.payload, undefined, 2);
-  core.info(`The event payload: ${payload}`);
-} catch (error) {
-  core.setFailed(error.message);
-}
-//# sourceMappingURL=index.js.map
+{"version":3,"file":"index.js","sources":["../src/index.js"],"sourcesContent":["import * as core from \"@actions/core\";\nimport * as github from \"@actions/github\";\n\ntry {\n  const nameToGreet = core.getInput(\"who-to-greet\");\n  core.info(`Hello ${nameToGreet}`);\n\n  const time = new Date().toTimeString();\n  core.setOutput(\"time\", time);\n\n  const payload = JSON.stringify(github.context.payload, undefined, 2);\n  core.info(`The event payload: ${payload}`);\n} catch (error) {\n  core.setFailed(error.message);\n}\n"],"names":[],"mappings":";;;AAGA,IAAI;AACJ,EAAE,MAAM,WAAW,GAAG,IAAI,CAAC,QAAQ,CAAC,cAAc,CAAC;AACnD,EAAE,IAAI,CAAC,IAAI,CAAC,CAAC,MAAM,EAAE,WAAW,CAAC,CAAC,CAAC;;AAEnC,EAAE,MAAM,IAAI,GAAG,IAAI,IAAI,EAAE,CAAC,YAAY,EAAE;AACxC,EAAE,IAAI,CAAC,SAAS,CAAC,MAAM,EAAE,IAAI,CAAC;;AAE9B,EAAE,MAAM,OAAO,GAAG,IAAI,CAAC,SAAS,CAAC,MAAM,CAAC,OAAO,CAAC,OAAO,EAAE,SAAS,EAAE,CAAC,CAAC;AACtE,EAAE,IAAI,CAAC,IAAI,CAAC,CAAC,mBAAmB,EAAE,OAAO,CAAC,CAAC,CAAC;AAC5C,CAAC,CAAC,OAAO,KAAK,EAAE;AAChB,EAAE,IAAI,CAAC,SAAS,CAAC,KAAK,CAAC,OAAO,CAAC;AAC/B"}
